@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A blogging engine based on node.js & express framework.">
+        <title>Marty's node.js practice</title>
+
+        {{!-- Bootstrap - CSS --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        {{!-- Bootstrap - JS, Popper.js, and jQuery --}}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        {{!-- link to CSS stylesheet --}}
+        <link href="/stylesheet.css" rel="stylesheet" type="text/CSS">
+
+        {{!-- Google Fonts --}}
+        <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+    </head>
+
+    <body>
+       
+       <nav class="navbar navbar-dark py-1">
+            <a class="navbar-brand" href="#">
+                <img src="/satellite.png" alt="logo" id="nav-logo">
+                navigation menu
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        
+        {{!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> --}}
+
+        <!-- main container for the page -->
+        <div class="container-fluid mt-5" id="mainContainer">
+
+            <div class="row">
+                <div class="col-9" id="mainContent">
+                    {{{body}}}
+                </div>  
+
+                <div class="col-3" id="mainSidebar">
+                    <div class="card border-0 cardSidebar my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Sidebar content</h4>
+                            <p>
+                                Eget arcu dictum varius duis at. Id consectetur purus ut faucibus pulvinar elementum integer. Scelerisque viverra mauris in aliquam sem. Pulvinar proin gravida hendrerit lectus a. Nunc eget lorem dolor sed viverra ipsum nunc.
+                            </p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
+        {{!-- Closing div for the main container --}}
+        </div>
+
+        {{!-- footer  --}}
+        <footer class="footer py-2" id="mainFooter">
+            <div class="container-fluid">
+                <p class="text-right mb-0" id="footerText">&#9790; martin read</p>
+            </div>
+        </footer>
+
+    </body>
+
+
+
+
+</html>

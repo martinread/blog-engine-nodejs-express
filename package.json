@@ -1,0 +1,19 @@
+{
+  "name": "blogging-engine-node",
+  "version": "1.0.0",
+  "description": "blogging engine built on node.js and express framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinread/blog-engine-nodejs-express.git"
+  },
+  "author": "martin read",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0"
+  }
+}

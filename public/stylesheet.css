@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainContainer {
+    flex: 1 0 auto;
+}
+
+#mainFooter {
+    flex-shrink: 0;
+    color: white;
+    background-color: #34393c;
+}
+
+#mainContent {
+    background: lightsteelblue;
+}
+
+#mainSidebar {
+    background: lightsalmon;
+}
+
+#nav-logo {
+    width: 35px;
+    height: auto;
+}
+
+#mainFooter, .navbar {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background:#77829e;
+}
+
+p {
+    font-size: 18px;
+}
