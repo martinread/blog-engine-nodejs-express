@@ -21,16 +21,19 @@
 
     <body>
        
-       <nav class="navbar navbar-dark py-1">
+       <nav class="navbar navbar-expand-lg navbar-dark py-1">
             <a class="navbar-brand" href="#">
                 <img src="/satellite.png" alt="logo" id="nav-logo">
                 navigation menu
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModalCenter">Login</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -55,6 +58,28 @@
                         </div>
                     </div>
                  </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-light text-center d-block">
+                        <img src="/satellite.png" class="d-inline-block" id="loginIcon">
+                    </div>
+                    <form action="/login" method="POST">
+                        <div class="modal-body">                      
+                                <label class="form-control border border-0" for="username">Username:</label>
+                                <input class="form-control" type="text" id="username" name="username" required>
+                                <label class="form-control border border-0" for="password">Password:</label>
+                                <input class="form-control" type="password" id="password" name="password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-info btn-block">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             </div>
 
         {{!-- Closing div for the main container --}}

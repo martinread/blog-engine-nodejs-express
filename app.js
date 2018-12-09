@@ -10,22 +10,22 @@ app.engine('handlebars', handlebars({
 }));
 app.set('view engine', 'handlebars');
 
-var fs = require('fs');
+// use express-session to create in-memory sessions
+var session = require('express-session');
+app.use(session({
+    resave: false,
+    saveUninitialized: false,
+    secret: "martysession"
+}));
 
-// route handler for the homepage
-app.get('/', function (req, res) {
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
-    fs.readFile(__dirname + "/lorem-ipsum-articles.json", function (err, data) {
-        var articles = JSON.parse(data);
+var auth = require('./authentication.js');
+auth.initialize(app);
 
-        var data = {
-            articles: articles
-        }
-
-        res.render('homepage', data);
-    });
-
-});
+var routes = require('./express-routing.js');
+routes(app);
 
 // make all files in the public folder (& subfolders) accessible
 app.use(express.static(__dirname + '/public'));

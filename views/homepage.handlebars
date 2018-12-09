@@ -1,3 +1,12 @@
+{{#if loginSuccess}} 
+    <div class="alert alert-success mt-3" role="alert">
+        Welcome {{username}}!
+    </div>
+{{else if loginFail}}
+    <div class="alert alert-danger mt-3" role="alert">
+        Login in failure!
+    </div>
+{{/if}}
 
 {{#each articles}}
     <div class="card my-3 border-0">
